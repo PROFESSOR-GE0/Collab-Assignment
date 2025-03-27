@@ -6,8 +6,11 @@
     font-family: Arial, sans-serif;
 }
 
-.container {
-    width: 90%;
+.firstpage .container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -21,18 +24,18 @@ header {
 }
 
 /* Logo */
-.logo {
+.firstpage .logo {
     font-size: 28px;
     font-weight: bold;
 }
 
 /* Navigation Links */
-nav {
+.firstpage nav {
     display: flex;
     gap: 20px;
 }
 
-nav a {
+.firstpage nav a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -40,14 +43,14 @@ nav a {
 }
 
 /* Right Section (Search + Sign In) */
-.header-right {
+.firstpage .header-right {
     display: flex;
     gap: 15px;
     align-items: center;
 }
 
 /* Search Button */
-.search-btn {
+.firstpage .search-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -57,7 +60,7 @@ nav a {
 
 
 /* Login Button */
-.login-btn {
+.firstpage .login-btn {
     background-color: black;
     color: white;
     border: none;
@@ -68,11 +71,9 @@ nav a {
 }
 
 
-
-
-
 /* About Page */
 .about{
+    display: flex;
     width: 100%;
     height: 100%;
     padding: 70px 20px 20px 20px ;
@@ -80,57 +81,47 @@ nav a {
     background-repeat: no-repeat;
     background-size:cover;
 }
-.about h2{
-    font-size: 240%;
+.about .text h2{
+    font-size: 280%;
     margin: 40px 50px 20px ;
 }
-.about p{
+.about .text p{
     font-size: 100%;
-    margin: 0px 700px 0px 50px;
+    margin: 0px 200px 0px 50px;
 }
-
-.logo {
-    font-size: 2rem;
-    display: inline-block;
+.about .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin: 20px 100px 800px 40px  ;
 }
-
-nav {
-    display: inline-block;
-    margin-left: 40px;
+.about .image-box {
+    width: 200px;
+    height: 180px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #007bff;
-}
-
-.header-right {
-    float: right;
-}
-
-button {
-    padding: 8px 15px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.search-btn {
-    background-color: #f8f9fa;
-}
-
-.login-btn {
-    background-color: #007bff;
+.about .explore{
+    background-color: black;
     color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px 0px 450px;
 }
+
+
 /* Destination Page Styles */
+.destination .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .destination {
     padding: 60px 0;
     background-color: #f9f9f9;
@@ -227,10 +218,6 @@ button {
     padding: 60px 0;
 }
 
-.about h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-}
 /* Travel Page */
 .stories{
     width: 100%;
@@ -248,4 +235,168 @@ button {
     width: 100%;
     height: 100%;
     padding: 70px 20px;
+}
+
+
+
+/*Responsiveness For other devices*/  
+@media only screen and (max-width: 800px){
+    
+.firstpage .container {
+    width: 90%;
+}
+
+header {
+    padding: 20px 0px 10px;
+    position: sticky ;
+
+}
+
+/* Logo */
+.firstpage .logo {
+    font-size: 20px;
+}
+
+/* Navigation Links */
+.firstpage nav {
+    display: none;
+}
+
+
+/* Right Section (Search + Sign In) */
+.firstpage .header-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: 90px ;
+}
+
+/* Search Button */
+.firstpage .search-btn {
+    font-size: 11px
+}
+
+/* Login Button */
+.firstpage .login-btn {
+    padding: 8px 15px;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+/* About Page */
+.about{
+    display:block;
+    padding: 10px 2px 5px 2px;
+    background-size: cover auto;
+
+}
+.about .text h2{
+    font-size: 120%;
+    margin: 10px 10px 10px 10px;
+    padding-right: 20px;
+}
+.about .text p{
+    font-size: 70%;
+    margin: 0px 15px 0px 5px;
+    padding: 0px 80px 0px 5px ;
+}
+.about .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin: 30px 80px 60px 30px  ;
+}
+.about .image-box {
+    width: 100px;
+    height: 140px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.about .explore{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 11px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px 0px 110px;
+}
+
+
+/* Destination Page Styles */
+.destination .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0px 50px 0px 10px;
+}
+.destination {
+    padding: 60px 0px 60px 0px;
+}
+
+.destination h2 {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 40px;
+}
+
+.destination-subtitle {
+    max-width: 700px;
+    margin: 0px 20px 10px 5px;
+    line-height: 1.6;
+}
+
+.destination-grid {
+    gap: 20px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    height: 150px;
+    width: 270px;
+    padding: 5px 5px 5px 10px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.card-content {
+    padding: 5px;
+}
+
+
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #7f8c8d;
+    font-size: 90%;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+
+
 }
