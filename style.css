@@ -1,5 +1,6 @@
 /* Global Styles */
-* {
+{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -218,18 +219,114 @@ header {
     padding: 60px 0;
 }
 
+
 /* Travel Page */
 .stories{
     width: 100%;
     height: 100%;
     padding: 70px 20px;
 }
+
+
 /* Travel Page */
-.inspiration{
+.inspiration .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.inspiration {
+    padding: 3rem 0;
+    background-color: #f5f7fa;
+    width: 100%;
+}
+
+.inspiration h2 {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.2rem);
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+  
+  .inspiration-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .inspiration-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .inspiration-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .inspiration-image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .inspiration-image img {
     width: 100%;
     height: 100%;
-    padding: 70px 20px;
-}
+    object-fit: cover;
+  }
+  
+  .Category-label {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .inspiration-card h3 {
+    font-size: 1.1rem;
+    padding: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .inspiration-card p {
+    color: #6c757d;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-link {
+    display: inline-block;
+    padding: 0 1rem 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .cta-link:hover {
+    color: #0056b3;
+  }
+  
+  .cta-link {
+      display: inline-block;
+      padding: 0.5rem 0.75rem 0.75rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+  
 /* Last Page */
 .last{
     width: 100%;
@@ -326,6 +423,17 @@ header {
     margin: 10px 0px 0px 110px;
 }
 
+.destination{
+    flex-direction: column;
+}
+.destination .card-image{
+    margin: 20px auto;
+}
+.card-image {
+    max-width: 90%;
+}
+
+
 
 /* Destination Page Styles */
 .destination .container {
@@ -398,5 +506,161 @@ header {
     padding: 8px 20px;
 }
 
+
+/* Travel Page */
+.inspiration .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.inspiration {
+    padding: 3rem 0;
+    background-color: #f5f7fa;
+    width: 100%;
+}
+
+.inspiration h2 {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.2rem);
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+  
+  .inspiration-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .inspiration-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .inspiration-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .inspiration-image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .inspiration-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .Category-label {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .inspiration-card h3 {
+    font-size: 1.1rem;
+    padding: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .inspiration-card p {
+    color: #6c757d;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-link {
+    display: inline-block;
+    padding: 0 1rem 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .cta-link:hover {
+    color: #0056b3;
+  }
+  
+  .cta-link {
+      display: inline-block;
+      padding: 0.5rem 0.75rem 0.75rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+  
+  /* OTHER SECTIONS */
+  .about, .stories, .last {
+      padding: clamp(2rem, 5vw, 3.5rem) 1.25rem;
+  }
+  
+  .about h2 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.2;
+  }
+
+/* Destination Section - Responsive */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0;
+}
+
+/* Inspiration Section - Responsive */
+.inspiration-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; 
+    padding: 0;
+}
+
+/* Mobile Responsiveness - Both Sections of destination and inspiration */
+@media (max-width: 800px) {
+    .destination-grid,
+    .inspiration-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .card-image,
+    .inspiration-image {
+        height: 160px;
+    }
+    .card-content,
+    .inspiration-card h3 {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-grid,
+    .inspiration-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Smaller Images */
+    .card-image,
+    .inspiration-image {
+        height: 140px;
+    }
+  }
 
 }
