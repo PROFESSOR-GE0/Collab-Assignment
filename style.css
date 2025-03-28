@@ -1,13 +1,17 @@
 /* Global Styles */
-* {
+{
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-.container {
-    width: 90%;
+.firstpage .container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -21,18 +25,18 @@ header {
 }
 
 /* Logo */
-.logo {
+.firstpage .logo {
     font-size: 28px;
     font-weight: bold;
 }
 
 /* Navigation Links */
-nav {
+.firstpage nav {
     display: flex;
     gap: 20px;
 }
 
-nav a {
+.firstpage nav a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
@@ -40,14 +44,14 @@ nav a {
 }
 
 /* Right Section (Search + Sign In) */
-.header-right {
+.firstpage .header-right {
     display: flex;
     gap: 15px;
     align-items: center;
 }
 
 /* Search Button */
-.search-btn {
+.firstpage .search-btn {
     background: none;
     border: none;
     cursor: pointer;
@@ -57,7 +61,7 @@ nav a {
 
 
 /* Login Button */
-.login-btn {
+.firstpage .login-btn {
     background-color: black;
     color: white;
     border: none;
@@ -68,11 +72,9 @@ nav a {
 }
 
 
-
-
-
 /* About Page */
 .about{
+    display: flex;
     width: 100%;
     height: 100%;
     padding: 70px 20px 20px 20px ;
@@ -80,57 +82,47 @@ nav a {
     background-repeat: no-repeat;
     background-size:cover;
 }
-.about h2{
-    font-size: 240%;
+.about .text h2{
+    font-size: 280%;
     margin: 40px 50px 20px ;
 }
-.about p{
+.about .text p{
     font-size: 100%;
-    margin: 0px 700px 0px 50px;
+    margin: 0px 200px 0px 50px;
 }
-
-.logo {
-    font-size: 2rem;
-    display: inline-block;
+.about .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin: 20px 100px 800px 40px  ;
 }
-
-nav {
-    display: inline-block;
-    margin-left: 40px;
+.about .image-box {
+    width: 200px;
+    height: 180px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #007bff;
-}
-
-.header-right {
-    float: right;
-}
-
-button {
-    padding: 8px 15px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.search-btn {
-    background-color: #f8f9fa;
-}
-
-.login-btn {
-    background-color: #007bff;
+.about .explore{
+    background-color: black;
     color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px 0px 450px;
 }
+
+
 /* Destination Page Styles */
+.destination .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .destination {
     padding: 60px 0;
     background-color: #f9f9f9;
@@ -222,30 +214,443 @@ button {
     background-color: #0056b3;
 }
 
-/* Other sections */
-.about, .stories, .inspiration, .last {
-    padding: 60px 0;
-}
-
-.about h2 {
-    font-size: 3rem;
-    line-height: 1.2;
-}
 /* Travel Page */
 .stories{
     width: 100%;
     height: 100%;
     padding: 70px 20px;
 }
+
+
 /* Travel Page */
-.inspiration{
+.inspiration .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.inspiration {
+    padding: 3rem 0;
+    background-color: #f5f7fa;
+    width: 100%;
+}
+
+.inspiration h2 {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.2rem);
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+  
+  .inspiration-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .inspiration-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .inspiration-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .inspiration-image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .inspiration-image img {
     width: 100%;
     height: 100%;
-    padding: 70px 20px;
-}
+    object-fit: cover;
+  }
+  
+  .Category-label {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .inspiration-card h3 {
+    font-size: 1.1rem;
+    padding: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .inspiration-card p {
+    color: #6c757d;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-link {
+    display: inline-block;
+    padding: 0 1rem 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .cta-link:hover {
+    color: #0056b3;
+  }
+  
+  .cta-link {
+      display: inline-block;
+      padding: 0.5rem 0.75rem 0.75rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+  
 /* Last Page */
 .last{
     width: 100%;
     height: 100%;
     padding: 70px 20px;
+}
+
+
+
+/*Responsiveness For other devices*/  
+@media only screen and (max-width: 800px){
+    
+.firstpage .container {
+    width: 90%;
+}
+
+header {
+    padding: 20px 0px 10px;
+    position: sticky ;
+
+}
+
+/* Logo */
+.firstpage .logo {
+    font-size: 20px;
+}
+
+/* Navigation Links */
+.firstpage nav {
+    display: none;
+}
+
+
+/* Right Section (Search + Sign In) */
+.firstpage .header-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: 90px ;
+}
+
+/* Search Button */
+.firstpage .search-btn {
+    font-size: 11px
+}
+
+/* Login Button */
+.firstpage .login-btn {
+    padding: 8px 15px;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+/* About Page */
+.about{
+    display:block;
+    padding: 10px 2px 5px 2px;
+    background-size: cover auto;
+
+}
+.about .text h2{
+    font-size: 120%;
+    margin: 10px 10px 10px 10px;
+    padding-right: 20px;
+}
+.about .text p{
+    font-size: 70%;
+    margin: 0px 15px 0px 5px;
+    padding: 0px 80px 0px 5px ;
+}
+.about .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin: 30px 80px 60px 30px  ;
+}
+.about .image-box {
+    width: 100px;
+    height: 140px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.about .explore{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 11px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px 0px 110px;
+}
+.destination{
+    flex-direction: column;
+}
+.destination .card-image{
+    margin: 20px auto;
+}
+.card-image {
+    max-width: 90%;
+}
+
+
+/* Destination Page Styles */
+.destination .container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0px 50px 0px 10px;
+}
+.destination {
+    padding: 60px 0px 60px 0px;
+}
+
+.destination h2 {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 40px;
+}
+
+.destination-subtitle {
+    max-width: 700px;
+    margin: 0px 20px 10px 5px;
+    line-height: 1.6;
+}
+
+.destination-grid {
+    gap: 20px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    height: 150px;
+    width: 270px;
+    padding: 5px 5px 5px 10px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.card-content {
+    padding: 5px;
+}
+
+
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #7f8c8d;
+    font-size: 90%;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+
+/* Travel Page */
+.inspiration .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.inspiration {
+    padding: 3rem 0;
+    background-color: #f5f7fa;
+    width: 100%;
+}
+
+.inspiration h2 {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.2rem);
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+  
+  .inspiration-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .inspiration-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .inspiration-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .inspiration-image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .inspiration-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .Category-label {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .inspiration-card h3 {
+    font-size: 1.1rem;
+    padding: 1rem 1rem 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .inspiration-card p {
+    color: #6c757d;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-link {
+    display: inline-block;
+    padding: 0 1rem 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  
+  .cta-link:hover {
+    color: #0056b3;
+  }
+  
+  .cta-link {
+      display: inline-block;
+      padding: 0.5rem 0.75rem 0.75rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+  }
+  
+  /* OTHER SECTIONS */
+  .about, .stories, .last {
+      padding: clamp(2rem, 5vw, 3.5rem) 1.25rem;
+  }
+  
+  .about h2 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.2;
+  }
+
+/* Destination Section - Responsive */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0;
+}
+
+/* Inspiration Section - Responsive */
+.inspiration-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; 
+    padding: 0;
+}
+
+/* Mobile Responsiveness - Both Sections of destination and inspiration */
+@media (max-width: 800px) {
+    .destination-grid,
+    .inspiration-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .card-image,
+    .inspiration-image {
+        height: 160px;
+    }
+    .card-content,
+    .inspiration-card h3 {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destination-grid,
+    .inspiration-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Smaller Images */
+    .card-image,
+    .inspiration-image {
+        height: 140px;
+    }
+  }
 }
