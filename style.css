@@ -214,6 +214,12 @@ header {
     background-color: #0056b3;
 }
 
+/* Other sections */
+.about, .stories, .inspiration, .last {
+    padding: 60px 0;
+}
+
+
 /* Travel Page */
 .stories{
     width: 100%;
@@ -416,6 +422,7 @@ header {
     cursor: pointer;
     margin: 10px 0px 0px 110px;
 }
+
 .destination{
     flex-direction: column;
 }
@@ -425,6 +432,7 @@ header {
 .card-image {
     max-width: 90%;
 }
+
 
 
 /* Destination Page Styles */
@@ -497,6 +505,7 @@ header {
     margin-top: 15px;
     padding: 8px 20px;
 }
+
 
 /* Travel Page */
 .inspiration .container {
@@ -653,4 +662,5 @@ header {
         height: 140px;
     }
   }
+
 }
