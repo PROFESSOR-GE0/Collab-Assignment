@@ -6,6 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* ----------------------------------This Part is the first page---------------------------------- */
 .firstpage .container {
     background-color: white;
     display: flex;
@@ -122,7 +123,10 @@ header {
 }
 
 
-/* Destination Page Styles */
+
+
+
+/* ----------------------------------This Part is the Destination page---------------------------------- */
 .destination .container {
     width: 90%;
     max-width: 1200px;
@@ -225,15 +229,94 @@ header {
 }
 
 
-/* Travel Page */
+
+
+
+/* ----------------------------------This Part is the Story page---------------------------------- */
 .stories{
     width: 100%;
     height: 100%;
-    padding: 70px 20px;
+    padding: 20px;
+}
+
+.stories .container {
+    max-width: 1000px;
+    margin: auto 30px;
+}
+.story {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+/* Section Heading */
+.stories h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+/* Section Heading */
+.stories h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for Layout */
+.stories-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left Side - Featured Story */
+.featured-story {
+    flex: 2;
+}
+
+.stories .image-box.large {
+    width: 95%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    flex-shrink: 0; 
+}
+
+/* Right Side - Small Stories */
+.stories .small-stories {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stories .story {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stories .image-box.small {
+    flex-shrink: 0;  
+    width: 110px; 
+    height: 110px; 
+    background-color: #ccc;
+    border-radius: 30px;
+}
+
+.stories h4 {
+    font-size: 17px;
+    
+}
+
+.stories p {
+    font-size: 15px;
+    color: gray;
 }
 
 
-/* Travel Page */
+
+
+
+/* ----------------------------------This Part is the travel page---------------------------------- */
 .inspiration .container {
     width: 90%;
     max-width: 1200px;
@@ -332,7 +415,12 @@ header {
       font-size: clamp(0.85rem, 2vw, 0.9rem);
   }
   
-/* Last Page */
+
+
+
+
+  
+/* ----------------------------------This Part is the Last page---------------------------------- */
 .last{
     width: 100%;
     height: 100%;
@@ -407,13 +495,13 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
-    margin: 20px 10px;
-    padding: 20px 5px 5px;
+    margin: 20px 5px;
+    padding: 20px 20px;
 
 }
 .about .image-box {
-    width: 140px;
-    height: 160px;
+    width: 150px;
+    height: 220px;
     background-color: #ccc;
     display: flex;
     align-items: center;
@@ -428,7 +516,7 @@ header {
     font-size: 11px;
     border-radius: 20px;
     cursor: pointer;
-    margin: 20px 110px 0px 110px;
+    margin: 20px 90px 0px 130px;
 }
 
 .destination{
