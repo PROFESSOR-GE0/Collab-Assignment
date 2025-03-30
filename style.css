@@ -240,21 +240,42 @@ header {
 }
 
 .stories .container {
-    max-width: 1000px;
-    margin: auto 30px;
-}
-.story {
-    display: flex;
-    align-items: center; 
-    gap: 15px; 
+    max-width: 100%;  
+    padding: 0px 30px;  
+    margin: auto; 
 }
 
 /* Section Heading */
-.stories h2 {
+.stories .head{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stories .head button{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 80%;
+    margin: 1px 10px 20px; 
+    padding: 8px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.stories .head h2 {
     font-size: 35px;
     margin-bottom: 20px;
+  
 }
-/* Section Heading */
+
+
+.story {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
 .stories h3 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -263,7 +284,7 @@ header {
 /* Flexbox for Layout */
 .stories-content {
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 
 /* Left Side - Featured Story */
@@ -273,11 +294,17 @@ header {
 
 .stories .image-box.large {
     width: 95%;
-    height: 100%;
+    height: 80%;
     background-color: #ccc;
     border-radius: 50px;
     margin-bottom: 10px;
-    flex-shrink: 0; 
+    overflow: hidden;  
+}
+
+.stories .image-box.large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Right Side - Small Stories */
@@ -296,15 +323,20 @@ header {
 
 .stories .image-box.small {
     flex-shrink: 0;  
-    width: 110px; 
-    height: 110px; 
+    width: 150px; 
+    height: 130px; 
     background-color: #ccc;
     border-radius: 30px;
+    overflow: hidden;  
+}
+.stories .image-box.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .stories h4 {
     font-size: 17px;
-    
 }
 
 .stories p {
@@ -429,9 +461,23 @@ header {
 
 
 
-/*Responsiveness For other devices*/  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------Responsiveness For other ----------------------------------*/  
 @media only screen and (max-width: 800px){
-    
+
+/* ----------------------------------This Part is the header page---------------------------------- */
 .firstpage .container {
     width: 100%;
 }
@@ -474,7 +520,7 @@ header {
     border-radius: 20px;
 }
 
-/* About Page */
+/* ----------------------------------This Part is the About page---------------------------------- */
 .about{
     display:block;
     padding: 10px 2px 5px 2px;
@@ -482,12 +528,12 @@ header {
 
 }
 .about .text h2{
-    font-size: 120%;
+    font-size: 150%;
     margin: 10px;
     padding-right: 20px;
 }
 .about .text p{
-    font-size: 70%;
+    font-size: 80%;
     margin: 0px 5px 0px 5px;
     padding: 0px 20px 0px 5px ;
 }
@@ -500,8 +546,8 @@ header {
 
 }
 .about .image-box {
-    width: 150px;
-    height: 220px;
+    width: 160px;
+    height: 240px;
     background-color: #ccc;
     display: flex;
     align-items: center;
@@ -519,6 +565,19 @@ header {
     margin: 20px 90px 0px 130px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------This Part is the Destination page---------------------------------- */
 .destination{
     flex-direction: column;
 }
@@ -529,9 +588,6 @@ header {
     max-width: 100%;
 }
 
-
-
-/* Destination Page Styles */
 .destination .container {
     width: 100%;
     max-width: 1200px;
@@ -580,13 +636,9 @@ header {
     height: 100%;
 }
 
-
-
 .card-content {
     padding: 5px;
 }
-
-
 
 .card-meta {
     display: flex;
@@ -603,7 +655,94 @@ header {
 }
 
 
-/* Travel Page */
+
+
+
+
+
+
+/* ----------------------------------This Part is the Story page---------------------------------- */
+.stories .container {
+    max-width: 100%;  
+    padding: 0px 10px;  
+    margin: auto; 
+}
+
+
+/* Flexbox for Layout */
+.stories-content {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stories .head button{
+ display: none;
+}
+
+.stories .head h2 {
+    font-size: 180%;
+    margin-bottom: 20px;
+  
+}
+
+/* Big Stories */
+.stories .image-box.large {
+    width: 95%;
+    height: 80%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.stories .image-box.large img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Small Stories */
+.stories .image-box.small {
+    flex-shrink: 0;  
+    width: 150px; 
+    height: 130px; 
+    background-color: #ccc;
+    border-radius: 20px;
+    overflow: hidden;  
+}
+.stories .image-box.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stories h3 {
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+.stories h4 {
+    font-size: 60%;
+}
+
+.stories p {
+    font-size: 70%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* ----------------------------------This Part is the Inspiration page---------------------------------- */
+.inspiration{
+    display: none;
+}
+.last{
+    display: none;
+} 
+
+
+
+/*
+
 .inspiration .container {
     width: 90%;
     max-width: 1200px;
@@ -730,7 +869,7 @@ header {
 }
 
 /* Mobile Responsiveness - Both Sections of destination and inspiration */
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     .destination-grid,
     .inspiration-categories {
         grid-template-columns: repeat(2, 1fr);
@@ -753,10 +892,10 @@ header {
     }
     
     /* Smaller Images */
-    .card-image,
+   /* .card-image,
     .inspiration-image {
         height: 140px;
     }
-  }
+  }*/
 
 }
