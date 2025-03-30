@@ -12,8 +12,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0px 5%;
 }
 header {
     background-color: #fff;
@@ -455,9 +455,88 @@ header {
 /* ----------------------------------This Part is the Last page---------------------------------- */
 .last{
     width: 100%;
-    height: 100%;
-    padding: 70px 20px;
+    height: 75%;
+    padding: 30px 0px;
+    background-color:#ccc;
 }
+.last .container{
+    display: flex;
+    gap: 6%;
+    padding: 2% 3%;
+}
+
+/* First Column */
+.last .firstcolumn{
+    flex-direction: column;
+    margin-top: 50px;
+    
+}
+.last .first-column h1{
+    font-size: 300%;
+    margin: 5% auto 30%;
+}
+
+.last .first-column h2{
+    font-size: 150%;
+    margin: 10% auto 5%;
+}
+.last .first-column h3{
+    font-size: 150%;
+    margin: auto;
+}
+
+
+
+/* Second Column */
+.last .second-column{
+    flex-direction: column;
+
+}
+.last .second-column p{
+    font-size: 130%;
+    margin: 0% auto 10%;
+}
+
+
+/* Third Column */
+.last .third-column{
+    flex-direction: column;
+
+}
+.last .third-column p{
+    font-size: 130%;
+    margin: 0% auto 10%;
+}
+
+
+/* Fourth Column */
+.last .fourt-column{
+    flex-direction: column;
+ 
+}
+.last .fourth-column p{
+    font-size: 130%;
+    margin: 0% auto 10%;
+}
+
+/* Fifth Column */
+.last .fifth-column{
+    flex-direction: column;
+
+}
+.last .fifth-column p{
+    font-size: 130%;
+    margin: 0% auto 10%;
+}
+
+.last .bottom {
+    background-color: black;
+    color: white;
+    padding: 15px 2%;
+    margin-top: 3%;
+    font-size: 70%;
+}
+
 
 
 
@@ -546,8 +625,8 @@ header {
 
 }
 .about .image-box {
-    width: 160px;
-    height: 240px;
+    width: 140px;
+    height: 220px;
     background-color: #ccc;
     display: flex;
     align-items: center;
@@ -564,8 +643,6 @@ header {
     cursor: pointer;
     margin: 20px 90px 0px 130px;
 }
-
-
 
 
 
