@@ -348,14 +348,19 @@ header {
 
 
 
-/* ----------------------------------This Part is the travel page---------------------------------- */
+/* ----------------------------------This Part is the inspiration page---------------------------------- */
+.inspiration{
+    width: 100%;
+    height: 90%;
+    padding: 0%;
+}
 .inspiration-container {
     background:gray;
     text-align: center;
-    padding: 100px;
+    padding: 220px 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 1400px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .inspiration-container h1 {
